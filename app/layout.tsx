@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  alternates: {
+    canonical: "https://moran-growth.site",
+  },
   openGraph: {
     title: "蓦然 Tech | 用 AI 驱动内容增长",
     description: "从推广到增长，分享 AI 时代的内容优化、SEO、GEO 实战方法。",
