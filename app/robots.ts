@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/_next/'],
     },
-    sitemap: 'https://www.moran-growth.site/sitemap.xml',
+    sitemap: 'https://moran-growth.site/sitemap.xml',
   }
 }
