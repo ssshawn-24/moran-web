@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.moran-growth.site'
+  const baseUrl = 'https://moran-growth.site'
 
   // 这里先写几个核心页面，后面你可以继续添加
   return [
