@@ -52,6 +52,5 @@ export function getPostBySlug(slug: string): Post | undefined {
     description: data.description,
     date: data.date,
     content,
-    console.log("contentDirectory:", contentDirectory);
   };
 }
