@@ -27,20 +27,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="zh-CN" className="antialiased" style={{ fontSmooth: "always" }}>
-      <head>
-       <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-326ER2F2L9"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-326ER2F2L9');
-</script>
-            `,
-          }}
-        />
-      </head>
+<head>
+  {/* Google tag (gtag.js) */}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-326ER2F2L9"></script>
+  <script
+    dangerouslySetInnerHTML={{
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-326ER2F2L9');
+      `,
+    }}
+  />
+</head>
       <body>{children}</body>
     </html>
   );
