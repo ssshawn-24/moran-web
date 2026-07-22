@@ -28,6 +28,9 @@ export async function generateMetadata({
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `https://moran-growth.site/blog/${slug}`,
+    },
   };
 }
 
@@ -46,25 +49,6 @@ export default async function PostPage({
   return (
     <main className="min-h-screen bg-[var(--color-paper)] text-[var(--color-ink)] px-6 py-20">
       <div className="max-w-3xl mx-auto">
-        
-        {/* 这里添加 structured data */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BlogPosting",
-              "headline": post.title,
-              "description": post.description,
-              "datePublished": post.date,
-              "author": {
-                "@type": "Person",
-                "name": "蓦然 Tech"
-              }
-            })
-          }}
-        />
-
         <Link
           href="/blog"
           className="inline-block mb-8 text-sm opacity-60 hover:opacity-100"
@@ -72,7 +56,6 @@ export default async function PostPage({
           ← 返回博客列表
         </Link>
 
-        {/* 其余代码不变 */}
         <time className="text-sm opacity-50">{post.date}</time>
         <h1 className="text-4xl font-bold mt-3 mb-6 leading-tight">
           {post.title}
@@ -80,6 +63,7 @@ export default async function PostPage({
         <p className="text-lg opacity-70 mb-10 leading-relaxed">
           {post.description}
         </p>
+
         <div className="prose prose-lg max-w-none leading-relaxed whitespace-pre-line">
           {post.content}
         </div>
