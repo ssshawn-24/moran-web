@@ -4,6 +4,9 @@ import { getAllPosts } from "../../lib/posts";
 export const metadata = {
   title: "博客",
   description: "分享 AI 驱动内容增长、SEO、GEO 相关的实战思考与方法。",
+  alternates: {
+    canonical: "https://moran-growth.site/blog",
+  },
 };
 
 export default function BlogPage() {
